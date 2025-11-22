@@ -1,7 +1,58 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3-Column Layout – Final Version</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<p>Test Page for modcraeft.github.io</p>
+
+  <div class="layout">
+
+    <aside class="left-sidebar">
+	<!--
+      <h2>Left</h2>
+      <p>Slide on Mobile</p>
+	-->
+    </aside>
+
+    <main class="center">
+
+      <!-- TOP BAR – grows to fill space above the square -->
+      <div class="top-bar">
+		<!--
+        <h2>Top Panel</h2>
+        <p>Controls</p>
+		-->
+      </div>
+
+      <!-- PERFECT SQUARE (fixed 1:1 ratio) -->
+      <div class="square-container">
+        <div class="square-content">
+          <canvas id="myCanvas">
+		  </canvas>
+        </div>
+      </div>
+
+      <!-- BOTTOM BAR – grows to fill space below the square -->
+      <div class="bottom-bar">
+		  <!--
+        <h2>Bottom Panel</h2>
+        <p>Control specific Sub Apps</p>
+		  -->
+      </div>
+
+    </main>
+
+    <aside class="right-sidebar">
+		<!--
+      <h2>Right</h2>
+      <p>Slide on Mobile</p>
+		-->
+    </aside>
+
+  </div>
+
 </body>
+</html>
