@@ -112,3 +112,30 @@ body, html {
     padding: 1rem;
   }
 }
+
+.logo-title {
+	color:#E5E5E5;
+	font-size:1.8rem;
+	position:absolute;
+	width:100%;
+	left:0%;
+	top:5%;
+	text-align:center;
+}
+.logo-sub-title {
+	color:#E5E5E5;
+	font-size:1.8rem;
+	position:absolute;
+	width:100%;
+	left:0%;
+	bottom:5%;
+	text-align:center;
+}
+.logo {
+	position:absolute;
+	width:50%;
+	height:50%;
+	top:25%;
+	left:25%;
+}
+
