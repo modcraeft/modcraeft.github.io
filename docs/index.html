@@ -6,28 +6,24 @@
   <title>mōdcræft</title>
   <link rel="stylesheet" href="css/styles.css"/>
   <link rel="preload" as="font" href="font/Hack-Regular.ttf" type="font/ttf" crossorigin>
-
   <link rel="icon" href="/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="/favicon.png">
-  
-  <!-- Optional but nice: different sizes for high-DPI screens & Windows tiles -->
+  <link rel="apple-touch-icon" href="/favicon.png"> 
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
-
 </head>
 <body>
   <div class="layout">
     <aside class="left-sidebar"></aside>
 
     <main class="center">
-      <!-- TOP BAR – now with beautiful auto-wrapping icon nav -->
+      <!-- TOP BAR – now with auto-wrapping icon nav -->
       <div class="top-bar">
         <div class="top-nav">
           <button class="nav-btn active" data-app="home">⌂</button>
           <button class="nav-btn" data-app="xnn"><img src="img/xnn.png" class="nav-icon" alt="XNN"></button>
-          <button class="nav-btn" data-app="snake">S</button>
-          <button class="nav-btn" data-app="gow">Go</button>
-          <button class="nav-btn" data-app="glcube">Cube</button>
+          <button class="nav-btn" data-app="snake">&#128013;</button>
+		  <button class="nav-btn" data-app="gow">&#x3C;/&#x3e;</button>
+          <button class="nav-btn" data-app="glcube">&#x25A0;</button>
           <!-- Add more buttons here – they will automatically flow right → left → up -->
         </div>
       </div>
@@ -59,7 +55,7 @@
     <aside class="right-sidebar"></aside>
   </div>
 
-  <!-- Simple & clean content switcher -->
+  <!-- Simple content switcher -->
   <script>
     document.querySelectorAll('.nav-btn').forEach(btn => {
       btn.addEventListener('click', () => {

@@ -105,12 +105,14 @@ body, html {
 .nav-btn {
   width: 56px;
   height: 56px;
-  background: rgba(85, 153, 255, 0.15);
+  /*background: rgba(85, 153, 255, 0.15);*/
+  background-color:#121212;
+
   border: 0px solid #5599FF;
   box-shadow:0 0 1px #5599FF;
-  border-radius: 8px;
+  border-radius: 4px;
   color: #5599FF;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.25s ease;
@@ -120,13 +122,15 @@ body, html {
 }
 .nav-btn:hover {
   background: rgba(85, 153, 255, 0.35);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(85, 153, 255, 0.3);
+ /* transform: translateY(-3px); */
+ /* box-shadow: 0 6px 16px rgba(85, 153, 255, 0.3); */
 }
 .nav-btn.active {
   background: #5599FF;
   color: white;
+  /*
   box-shadow: 0 0 20px rgba(85, 153, 255, 0.6);
+  */
 }
 .nav-icon {
   width: 36px;
