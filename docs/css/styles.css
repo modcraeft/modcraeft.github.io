@@ -126,7 +126,7 @@ body, html {
  /* box-shadow: 0 6px 16px rgba(85, 153, 255, 0.3); */
 }
 .nav-btn.active {
-  background: #5599FF;
+  background: #222222;
   color: white;
   /*
   box-shadow: 0 0 20px rgba(85, 153, 255, 0.6);
