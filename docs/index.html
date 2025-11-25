@@ -5,74 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
   <title>mōdcræft</title>
   <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="preload" as="font" href="font/Hack-Regular.ttf" type="font/ttf" crossorigin>
+
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  
+  <!-- Optional but nice: different sizes for high-DPI screens & Windows tiles -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
 
 </head>
 <body>
-
   <div class="layout">
-
-    <aside class="left-sidebar">
-	<!--
-      <h2>Left</h2>
-      <p>Slide on Mobile</p>
-	-->
-	<!--
-	<nav class="sidebar-nav">
-        <ul class="sidebar-list">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">XNN</a></li>
-          <li><a href="#">Snake</a></li>
-          <li><a href="#">GoWebServer</a></li>
-          <li><a href="#">glCube</a></li>
-        </ul>
-      </nav>
-	-->
-
-    </aside>
+    <aside class="left-sidebar"></aside>
 
     <main class="center">
-
-      <!-- TOP BAR – grows to fill space above the square -->
+      <!-- TOP BAR – now with beautiful auto-wrapping icon nav -->
       <div class="top-bar">
-		  <div class="top-bar-button-bar">
-		  	<button class="top-bar-button">&#x2302;</button>
-			<button class="top-bar-button"><img class="top-bar-button-img" src="img/xnn.png"/></button>
-		  </div>
-      </div>
-
-      <!-- PERFECT SQUARE (fixed 1:1 ratio) -->
-      <div class="square-container">
-        <div class="square-content">
-          <div id="myCanvas">
-			  <p class="logo-title">mōdcræft</p>
-			  <p class="logo-sub-title">Chronicle</p>
-			  <img class="logo" src="img/logo.png">
-		  </div>
+        <div class="top-nav">
+          <button class="nav-btn active" data-app="home">⌂</button>
+          <button class="nav-btn" data-app="xnn"><img src="img/xnn.png" class="nav-icon" alt="XNN"></button>
+          <button class="nav-btn" data-app="snake">S</button>
+          <button class="nav-btn" data-app="gow">Go</button>
+          <button class="nav-btn" data-app="glcube">Cube</button>
+          <!-- Add more buttons here – they will automatically flow right → left → up -->
         </div>
       </div>
 
-      <!-- BOTTOM BAR – grows to fill space below the square -->
-      <div class="bottom-bar">
-		  <!--
-        <h2>Bottom Panel</h2>
-        <p>Control specific Sub Apps</p>
-		  -->
+      <!-- PERFECT SQUARE -->
+      <div class="square-container">
+        <div class="square-content" id="app-container">
+
+          <!-- Home / Default -->
+          <div class="app-screen active" id="app-home">
+            <p class="logo-title">mōdcræft</p>
+            <p class="logo-sub-title">Chronicle</p>
+            <img class="logo" src="img/logo.png" alt="logo">
+          </div>
+
+          <!-- Placeholder screens – replace with real apps later -->
+          <div class="app-screen" id="app-xnn"><h2>XNN</h2><p>Neural net demo…</p></div>
+          <div class="app-screen" id="app-snake"><h2>Snake</h2><p>Game coming soon</p></div>
+          <div class="app-screen" id="app-gow"><h2>Go Web Server</h2><p>Live demo</p></div>
+          <div class="app-screen" id="app-glcube"><h2>WebGL Cube</h2><p>3D demo</p></div>
+
+        </div>
       </div>
 
+      <!-- BOTTOM BAR (still empty for now) -->
+      <div class="bottom-bar"></div>
     </main>
 
-    <aside class="right-sidebar">
-		<!--
-      <h2>Right</h2>
-      <p>Slide on Mobile</p>
-		-->
-    </aside>
-
+    <aside class="right-sidebar"></aside>
   </div>
 
+  <!-- Simple & clean content switcher -->
+  <script>
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const app = btn.dataset.app;
+
+        // Update buttons
+        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Switch screen
+        document.querySelectorAll('.app-screen').forEach(s => s.classList.remove('active'));
+        document.getElementById('app-' + app).classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
-
-
-
-
