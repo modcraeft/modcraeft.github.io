@@ -7,67 +7,81 @@
   <link rel="stylesheet" href="css/styles.css"/>
   <link rel="preload" as="font" href="font/Hack-Regular.ttf" type="font/ttf" crossorigin>
   <link rel="icon" href="/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="/favicon.png"> 
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
 </head>
 <body>
   <div class="layout">
     <aside class="left-sidebar"></aside>
 
     <main class="center">
-      <!-- TOP BAR – now with auto-wrapping icon nav -->
+      <!-- TOP BAR -->
       <div class="top-bar">
         <div class="top-nav">
           <button class="nav-btn active" data-app="home">⌂</button>
           <button class="nav-btn" data-app="xnn"><img src="img/xnn.png" class="nav-icon" alt="XNN"></button>
           <button class="nav-btn" data-app="snake">&#128013;</button>
-		  <button class="nav-btn" data-app="gow">&#x3C;/&#x3e;</button>
+          <button class="nav-btn" data-app="gow">&#x3C;/&#x3e;</button>
           <button class="nav-btn" data-app="glcube"><img src="img/cube.png" class="nav-icon" alt="Cube"></button>
-          <!-- Add more buttons here – they will automatically flow right → left → up -->
         </div>
       </div>
 
-      <!-- PERFECT SQUARE -->
+      <!-- PERFECTLY CENTERED SQUARE -->
       <div class="square-container">
-        <div class="square-content" id="app-container">
-
-          <!-- Home / Default -->
+        <div class="square-content">
           <div class="app-screen active" id="app-home">
             <p class="logo-title">mōdcræft</p>
             <p class="logo-sub-title">Chronicle</p>
             <img class="logo" src="img/logo.png" alt="logo">
           </div>
-
-          <!-- Placeholder screens – replace with real apps later -->
           <div class="app-screen" id="app-xnn"><h2>XNN</h2><p>Neural net demo…</p></div>
           <div class="app-screen" id="app-snake"><h2>Snake</h2><p>Game coming soon</p></div>
           <div class="app-screen" id="app-gow"><h2>Go Web Server</h2><p>Live demo</p></div>
           <div class="app-screen" id="app-glcube"><h2>WebGL Cube</h2><p>3D demo</p></div>
-
         </div>
       </div>
 
-      <!-- BOTTOM BAR (still empty for now) -->
-      <div class="bottom-bar"></div>
+      <!-- BOTTOM BAR -->
+      <div class="bottom-bar-container">
+        <div class="app-bottom-bar" id="bottom-home"></div>
+        <div class="app-bottom-bar" id="bottom-xnn">
+          <button class="control-btn">Train</button>
+          <button class="control-btn">Reset</button>
+          <button class="control-btn">Export</button>
+        </div>
+        <div class="app-bottom-bar" id="bottom-snake">
+          <button class="control-btn">Start</button>
+          <button class="control-btn">Pause</button>
+          <div style="flex:1"></div>
+          <span>Score: <span id="snake-score">0</span></span>
+        </iv>
+        <div class="app-bottom-bar" id="bottom-gow">
+          <button class="control-btn">Start Server</button>
+          <button class="control-btn">Stop</button>
+        </div>
+        <div class="app-bottom-bar" id="bottom-glcube">
+          <button class="control-btn">Rotate</button>
+          <button class="control-btn">Color</button>
+          <button class="control-btn">Wireframe</button>
+        </div>
+      </div>
     </main>
 
     <aside class="right-sidebar"></aside>
   </div>
 
-  <!-- Simple content switcher -->
   <script>
     document.querySelectorAll('.nav-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const app = btn.dataset.app;
 
-        // Update buttons
         document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
-        // Switch screen
         document.querySelectorAll('.app-screen').forEach(s => s.classList.remove('active'));
         document.getElementById('app-' + app).classList.add('active');
+
+        document.querySelectorAll('.app-bottom-bar').forEach(b => b.classList.remove('active'));
+        document.getElementById('bottom-' + app).classList.add('active');
       });
     });
   </script>
