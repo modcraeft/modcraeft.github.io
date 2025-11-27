@@ -181,3 +181,6 @@ body, html { height: 100%; background: #111; color: #eee; }
   overflow-wrap: anywhere;
   overflow: hidden;
 }
+#snake-score {margin-right:10px;}
+#snake-top-score {margin-right:10px;}
+
