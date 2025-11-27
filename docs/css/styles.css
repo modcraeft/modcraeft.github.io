@@ -164,3 +164,20 @@ body, html { height: 100%; background: #111; color: #eee; }
   .layout { grid-template-columns: 1fr; }
   .left-sidebar, .right-sidebar { display: none; }
 }
+
+
+/*Demo Specific*/
+#gow-terminal {
+  margin: 0;
+  padding: 2rem;
+  height: calc(100% - 7rem);
+  background: #000;
+  color: #0f8;
+  font-family: 'Hack', monospace;
+  font-size: clamp(11px, 1.5vmin, 14px);
+  line-height: 1.45;
+  white-space: pre-wrap !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  overflow: hidden;
+}
