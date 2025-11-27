@@ -33,7 +33,7 @@
             <p class="logo-sub-title">Chronicle</p>
             <img class="logo" src="img/logo.png" alt="logo">
           </div>
-          <div class="app-screen" id="app-xnn"><h2>XNN</h2><p>Neural net demo…</p></div>
+          <div class="app-screen" id="app-xnn"><h2 style="display:none">XNN</h2><p style="display:none;">Neural net demo…</p></div>
           <div class="app-screen" id="app-snake"><h2>Snake</h2><p>Game coming soon</p></div>
           <div class="app-screen" id="app-gow"><h2>Go Web Server</h2><p>Live demo</p></div>
           <div class="app-screen" id="app-glcube"><h2>WebGL Cube</h2><p>3D demo</p></div>
@@ -44,15 +44,16 @@
       <div class="bottom-bar-container">
         <div class="app-bottom-bar" id="bottom-home"></div>
         <div class="app-bottom-bar" id="bottom-xnn">
-          <button class="control-btn">Train</button>
-          <button class="control-btn">Reset</button>
-          <button class="control-btn">Export</button>
+		  <button class="control-btn">Pause</button>
+  		  <button class="control-btn">Reset</button>
+  		  <button class="control-btn">Fullscreen</button>
         </div>
         <div class="app-bottom-bar" id="bottom-snake">
           <button class="control-btn">Start</button>
           <button class="control-btn">Pause</button>
-          <div style="flex:1"></div>
+		  <!--<div style="flex:1"></div>-->
           <span>Score: <span id="snake-score">0</span></span>
+		  <span style="color:#ffd174;">Top: <span id="snake-top-score">0</span></span>
         </iv>
         <div class="app-bottom-bar" id="bottom-gow">
           <button class="control-btn">Start Server</button>
@@ -85,5 +86,10 @@
       });
     });
   </script>
+
+  <script src="js/aisnake.js"></script>
+  <script src="js/xnn.js"></script>
+  <script src="js/glcube.js"></script>
+
 </body>
 </html>

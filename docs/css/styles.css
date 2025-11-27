@@ -90,6 +90,7 @@ body, html { height: 100%; background: #111; color: #eee; }
   max-width: min(var(--max-center-width), calc(100vh - 12rem));
   position: relative;
   margin: auto 0;                    /* vertical centering */
+
 }
 
 .square-content {
@@ -129,6 +130,8 @@ body, html { height: 100%; background: #111; color: #eee; }
 .app-bottom-bar {
   display: none;
   width: 100%;
+  max-width: var(--max-center-width);
+  margin: 0 auto;
   background: rgba(30,30,40,0.95);
   background: transparent;
   backdrop-filter: blur(10px);
