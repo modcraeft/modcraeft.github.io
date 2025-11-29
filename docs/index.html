@@ -22,6 +22,7 @@
           <button class="nav-btn" data-app="snake">&#128013;</button>
           <button class="nav-btn" data-app="gow">&#x3C;/&#x3e;</button>
           <button class="nav-btn" data-app="glcube"><img src="img/cube.png" class="nav-icon" alt="Cube"></button>
+		  <button class="nav-btn" data-app="dr0id"><img src="img/sine.png" class="nav-icon" alt="DR0ID"></button>
         </div>
       </div>
 
@@ -37,6 +38,9 @@
           <div class="app-screen" id="app-snake"><h2>Snake</h2><p>Game coming soon</p></div>
           <div class="app-screen" id="app-gow"><pre id="gow-terminal"></pre></div>
           <div class="app-screen" id="app-glcube"><h2>WebGL Cube</h2><p>3D demo</p></div>
+		  <div class="app-screen" id="app-dr0id"><h2>DR0ID</h2><p style="text-align:center; opacity:0.8; margin:1rem 0;">Spectrum analyzer + dual oscilloscope<br><small></small></p></div>
+
+
         </div>
       </div>
 
@@ -54,7 +58,7 @@
 		  <!--<div style="flex:1"></div>-->
           <span>Score: <span id="snake-score">0</span></span>
 		  <span style="color:#ffd174;">Top: <span id="snake-top-score">0</span></span>
-        </iv>
+        </div>
         <div class="app-bottom-bar" id="bottom-gow">
           <button class="control-btn">Start Server</button>
           <button class="control-btn">Stop</button>
@@ -64,6 +68,8 @@
           <button class="control-btn">Color</button>
           <button class="control-btn">Wireframe</button>
         </div>
+	    <div class="app-bottom-bar" id="bottom-dr0id">
+	    </div>
       </div>
     </main>
 
@@ -91,6 +97,7 @@
   <script src="js/xnn.js"></script>
   <script src="js/glcube.js"></script>
   <script src="js/gow.js"></script>
+  <script src="js/dr0id.js"></script>
 
 
 </body>
