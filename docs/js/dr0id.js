@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       canvas = document.createElement('canvas');
       canvas.style.width = '100%';
       canvas.style.height = '100%';
-      canvas.style.background = '#000';
+      canvas.style.background = 'transparent';
       screen.appendChild(canvas);
       ctx = canvas.getContext('2d');
 
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       const render = () => {
-        ctx.fillStyle = '#000';
+        ctx.fillStyle = '#111111';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         if (!isPlaying || !analyser) {
