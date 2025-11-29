@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new MutationObserver(() => {
         if (screen.classList.contains('active')) {
             if (!demo) {
-                screen.innerHTML = '<h2>WebGL Cube</h2><p>OpenGL-style rotating cube with affine warped texture</p>';
+                screen.innerHTML = '<h2>3D Cube</h2><p>OpenGL-style rotating cube with affine warped texture</p>';
                 demo = new GLCubeDemo(screen);
                 window.glcubeDemo = demo;
             }
