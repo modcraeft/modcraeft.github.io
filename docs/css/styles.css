@@ -62,7 +62,7 @@ body, html { height: 100%; background: #111; color: #eee; }
 }
 
 .nav-btn {
-  width: 46px; height: 46px;
+  width: 36px; height: 36px;
   background-color: #121212;
   border: 0 solid #5599FF;
   box-shadow: 0 0 1px #5599FF;
